@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./asset/css/styleLogin.css">
+  <link rel="icon" href="./asset/img/title-img.jpg">
+  <title>Admin login</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form action="#" class="sign-in-form">
+          <h2 class="title">Đăng nhập</h2>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="text" class="username" placeholder="Tài khoản">
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" class="password" placeholder="Mật khẩu">
+          </div>
+          <div class="col-8">
+            <input type="checkbox" checked class="remember">
+            <label for="remember">
+              Nhớ tôi
+            </label>
+          </div>
+          <input type="submit" value='Đăng nhập' class="btn btnLogin solid">
+
+        </form>
+        <form action="#" class="sign-up-form">
+          <h2 class="title">Đăng kí</h2>
+          <div class="input-field">
+            <i class="fas fa-signature"></i>
+            <input type="text" class="fullname" placeholder="Tên đầy đủ">
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" class="mail" pattern="[^ @]*@[^ @]*" placeholder="Gmail">
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" class="usernamesu" placeholder="Tài khoản">
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" class="passwordsu" placeholder="Mật khẩu">
+          </div>
+          <input type="submit" class="btn btnsignup" value="Đăng kí">
+
+        </form>
+      </div>
+    </div>
+    <dic class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>Có gì mới ?</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae eos iste explicabo delectus quos tempore
+            illum, repellat corporis, ipsum velit laboriosam? Illo ex esse maiores aut laboriosam enim consequuntur
+            molestias.
+          </p>
+          <button class="btn transparent" id="sign-up-btn">
+            Đăng kí
+          </button>
+        </div>
+        <img src="./asset/img/log.svg" class="image" alt="">
+      </div>
+      <div class="panel right-panel">
+        <div class="content">
+          <h3>Bạn đã có tài khoản ?</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur commodi facilis quis recusandae earum
+            voluptate architecto consequuntur distinctio, sed quas saepe quidem, perspiciatis quia id impedit
+            repellendus dolore nulla? Sit!</p>
+          <button class="btn transparent" id="sign-in-btn">
+            Đăng nhập
+          </button>
+        </div>
+        <img src="./asset/img/register.svg" alt="" class="image">
+      </div>
+    </dic>
+  </div>
+  <!-- main -->
+  <script src="./asset/js/mainLogin.js"></script>
+  <!-- Bootbox -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"
+    integrity="sha512-RdSPYh1WA6BF0RhpisYJVYkOyTzK4HwofJ3Q7ivt/jkpW6Vc8AurL1R+4AUcvn9IwEKAPm/fk7qFZW3OuiUDeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- bootbox -->
+  <script src="./asset/js/bootstrap.min.js"></script>
+</body>
+
+</html>

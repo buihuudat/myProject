@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- icon awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./asset/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
+  <!-- loading -->
+  <link rel="stylesheet" href="./asset/css/loading.css">
+  <!-- Css -->
+  <link rel="stylesheet" href="./asset/css/style.css">
+  <!-- title-icon -->
+  <link rel="icon" href="./asset/img/title-img.jpg">
+  <title>Bui Huu Dat</title>
+</head>
+
+<body>
+  <span class="loader load">
+    <div class="cont">
+
+      <div class="h1Container">
+
+        <div class="cube h1c w1 l1">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h1c w1 l2">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h1c w1 l3">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h1c w2 l1">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h1c w2 l2">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h1c w2 l3">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h1c w3 l1">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h1c w3 l2">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h1c w3 l3">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+      </div>
+
+      <div class="h2Container">
+
+        <div class="cube h2c w1 l1">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h2c w1 l2">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h2c w1 l3">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h2c w2 l1">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h2c w2 l2">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h2c w2 l3">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h2c w3 l1">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h2c w3 l2">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h2c w3 l3">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+      </div>
+
+      <div class="h3Container">
+
+        <div class="cube h3c w1 l1">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h3c w1 l2">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h3c w1 l3">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h3c w2 l1">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h3c w2 l2">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h3c w2 l3">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h3c w3 l1">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h3c w3 l2">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+
+        <div class="cube h3c w3 l3">
+          <div class="face top"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+        </div>
+      </div>
+
+    </div>
+  </span>
+
+  <main id="main">
+    <div class="nav">
+      <div class="headNav">
+        <div class="logo"><a href="./index.html" target="_blank">BHDCar</a> </div>
+        <div class="danhMucAvatar fir">
+          <div class="img-danhMuc">
+            <label class="label">
+              <input type="file" id="file-upload" accept=".png, .jpg, .jpeg" />
+              <figure class="personal-figure">
+                <img src="./asset/img/avatar.jpeg" class="personal-avatar" alt="avatar">
+                <figcaption class="personal-figcaption">
+                  <img
+                    src="https://raw.githubusercontent.com/ThiagoLuizNunes/angular-boilerplate/master/src/assets/imgs/camera-white.png">
+                </figcaption>
+              </figure>
+            </label>
+          </div>
+          <div class="title-chucVu">Quản lí</div>
+          <div class="name-danhmuc">Bùi Hữu Đạt</div>
+        </div>
+      </div>
+
+      <div class="nav-select">
+        <div class="danhMuc">
+          <div class="danhmuctong select-danhMuc addStyle">
+            <div class="par sl">
+              <div class="nav-icon"><i class="fas fa-home"></i></div>
+              <div class="ADname">Tổng quan</div>
+            </div>
+
+          </div>
+          <div class="select-danhMuc ">
+            <div class="par sl">
+              <div class="nav-icon"><i class="fas fa-user"></i></div>
+              <span class="nav-title">Khách hàng</span>
+              <div class="nav-icon-down"><i class="fas fa-angle-down"></i></div>
+            </div>
+            <div class="chr">
+              <ul>
+                <li class="li tables khachhang"><i class="far fa-arrow-alt-circle-right"></i><span>Khách hàng</span>
+                </li>
+                <li class="li tables diachi"><i class="far fa-arrow-alt-circle-right"></i><span>Địa chỉ</span></li>
+                <li class="li tables sothichkhachhang"><i class="far fa-arrow-alt-circle-right"></i><span>Sở
+                    thích</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="select-danhMuc">
+            <div class="par sl">
+              <div class="nav-icon"><i class="fas fa-car"></i></div>
+              <span class="nav-title">Xe</span>
+              <div class="nav-icon-down"><i class="fas fa-angle-down"></i></div>
+            </div>
+            <div class="chr">
+              <ul>
+                <li class="li tables xeban"><i class="far fa-arrow-alt-circle-right"></i><span>Xe bán</span></li>
+                <li class="li tables dacdiemxe"><i class="far fa-arrow-alt-circle-right"></i><span>Đặc điểm xe</span>
+                </li>
+                <li class="li tables xedaban"><i class="far fa-arrow-alt-circle-right"></i><span>Xe đã bán</span></li>
+                <li class="li tables dacdiemxedaban"><i class="far fa-arrow-alt-circle-right"></i><span>ĐĐ xe đã
+                    bán</span></li>
+                <li class="li tables xemohinh"><i class="far fa-arrow-alt-circle-right"></i><span>Xe mô hình</span></li>
+                <li class="li tables loaixe"><i class="far fa-arrow-alt-circle-right"></i><span>Loại xe</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="select-danhMuc">
+            <div class="par sl">
+              <div class="nav-icon"><i class="fas fa-money-bill"></i></div>
+              <span class="nav-title">Thanh toán</span>
+              <div class="nav-icon-down"><i class="fas fa-angle-down"></i></div>
+            </div>
+            <div class="chr">
+              <ul>
+                <li class="li tables trangthaithanhtoan"><i class="far fa-arrow-alt-circle-right"></i><span>Trạng
+                    thái</span></li>
+                <li class="li tables hoadon"><i class="far fa-arrow-alt-circle-right"></i><span>Hóa đơn</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="select-danhMuc">
+            <div class="par sl">
+              <div class="nav-icon"><i class="fas fa-car-crash"></i></i></div>
+              <span class="nav-title">Bảo hiểm</span>
+              <div class="nav-icon-down"><i class="fas fa-angle-down"></i></div>
+            </div>
+            <div class="chr">
+              <ul>
+                <li class="li tables baohiem"><i class="far fa-arrow-alt-circle-right"></i><span>Bảo hiểm</span></li>
+                <li class="li tables congtybaohiem"><i class="far fa-arrow-alt-circle-right"></i><span>Công ty bảo
+                    hiểm</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="select-danhMuc">
+            <div class="par sl">
+              <div class="nav-icon"><i class="fas fa-coins"></i></div>
+              <span class="nav-title">Tài chính</span>
+              <div class="nav-icon-down"><i class="fas fa-angle-down"></i></div>
+            </div>
+            <div class="chr">
+              <ul>
+                <li class="li tables muachovay"><i class="far fa-arrow-alt-circle-right"></i><span>Mua cho vay</span>
+                </li>
+                <li class="li tables congtytaichinh"><i class="far fa-arrow-alt-circle-right"></i><span>Công ty tài
+                    chính</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="select-danhMuc nvdm">
+            <div class="par sl li">
+              <div class="nav-icon"><i class="fas fa-id-card-alt"></i></div>
+              <span class="nav-title">Nhân Viên</span>
+            </div>
+          </div>
+          <div class="select-danhMuc">
+            <div class="par sl li">
+              <div class="nav-icon"><i class="fas fa-user-cog"></i></div>
+              <span class="nav-title">Nhà sản xuất</span>
+            </div>
+          </div>
+          <div class="select-danhMuc">
+            <div class="par sl li">
+              <div class="nav-icon"><i class="fas fa-list"></i></div>
+              <span class="nav-title">Quản lí tài khoản</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="header-main">
+        <div class="nav-toggle"><i class="fas fa-arrows-alt"></i></div>
+        <div class="noti" title="Notification"><i class="fas fa-bell"></i></div>
+        <div class="chatBox" title="Chat box"><i class="fas fa-comment-alt"></i></div>
+        <div class="header-img"><img src="./asset/img/avatar.jpeg" class="personal-avatar" alt=""></div>
+        <div class="dark-theme">
+          <input id="toggle" class="toggle" type="checkbox">
+          <div class="background"></div>
+          <label for="toggle" class="title"></label>
+        </div>
+        <div class="header-select">
+          <div class="header-select-iterm changePass">
+            <div class="nav-icon"><i class="fas fa-lock"></i></div>
+            <div class="iterm-title">Đổi mật khẩu</div>
+          </div>
+          <div class="header-select-iterm nav-logout">
+            <div class="nav-icon"><i class="fas fa-sign-out-alt"></i></div>
+            <div class="iterm-title">Đăng xuất</div>
+          </div>
+        </div>
+      </div>
+      <!-- change pass -->
+      <div class="form-content">
+        <div class="form">
+          <div class="form-group">
+            <label for="text">Mật khẩu cũ</label>
+            <input type="text" class="form-control passo" id="passwordo" name="passo" placeholder="Mật khẩu cũ"></input>
+          </div>
+          <div class="form-group">
+            <label for="password">Mật khẩu mới</label>
+            <input type="password" class="form-control wn passn" id="passwordn1" name="passn"
+              placeholder="Mật khẩu mới">
+          </div>
+          <div class="form-group">
+            <label for="password">Nhập lại mật khẩu</label>
+            <input type="password" class="form-control wn passn2" id="passwordn" name="passn2"
+              placeholder="Nhập lại mật khẩu">
+          </div>
+          <div class="showPass">
+            <label for="">
+              <input type="checkbox" id="checkShow">Hiện mật khẩu
+            </label>
+          </div>
+          <div class="btnform">
+            <button class="cancel">Hủy</button>
+            <button class="submit">Thực hiện</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tongQuan">
+        <div class="tongQuan-content">
+          <div class="cardBox">
+            <div class="card">
+              <div class="card-Content">
+                <div>
+                  <div class="numbers">1,504</div>
+                  <div class="cardName">Lượt xem</div>
+                </div>
+                <div class="iconBx">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-Content">
+                <div>
+                  <div class="numbers">204</div>
+                  <div class="cardName">Lượt mua</div>
+                </div>
+                <div class="iconBx">
+                  <ion-icon name="cart-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-Content">
+                <div>
+                  <div class="numbers">1,152</div>
+                  <div class="cardName">Phản hồi</div>
+                </div>
+                <div class="iconBx">
+                  <ion-icon name="chatbubbles-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-Content">
+                <div>
+                  <div class="numbers">$8,753</div>
+                  <div class="cardName">Quỹ</div>
+                </div>
+                <div class="iconBx">
+                  <ion-icon name="cash-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-Content">
+                <div>
+                  <div class="numbers">10,753</div>
+                  <div class="cardName">Người dùng</div>
+                </div>
+                <div class="iconBx">
+                  <ion-icon name="people-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chartd">
+            <div class="chart-content row">
+              <div class="dashboard">
+                <!-- chart -->
+                <div class="chartBar row">
+                  <div class="chartBox col-sm-3">
+                    <canvas id="myChartPolarArea"></canvas>
+                  </div>
+                  <div class="chartBox col-sm-7">
+                    <canvas id="myChartBar"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="theEnd row">
+            <div class="tongHoaDon tbs col-sm-7">
+              <div class='chart'>
+                <button class='js-do-it-again'>
+                  <span class='ion-loop'></span>
+                </button>
+                <svg viewbox='0 0 560 260'>
+                  <defs>
+                    <filter id='dropshadow'>
+                      <feGaussianBlur in='SourceAlpha' stdDeviation='3'></feGaussianBlur>
+                      <feOffset dx='0' dy='0' result='offsetblur'></feOffset>
+                      <feComponentTransfer>
+                        <feFuncA slope='0.2' type='linear'></feFuncA>
+                      </feComponentTransfer>
+                      <feMerge>
+                        <feMergeNode></feMergeNode>
+                        <feMergeNode in='SourceGraphic'></feMergeNode>
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <g class='datasets'>
+                    <path class='dataset'
+                      d='M0,260 C0,260 4,252 7,252 C66,252 90,102 139,102 C188,102 205,135 252,135 C299,135 309,89 330,89 C350,89 366,122 404,122 C442,122 431,98 451,98 C470,98 499,213 560,260 L0,259 Z'
+                      id='dataset-3'></path>
+                    <path class='dataset'
+                      d='M0,260 C35,254 63,124 88,124 C114,124 148,163 219,163 C290,163 315,100 359,100 C402,100 520,244 560,259 C560,259 0,259 0,260 Z'
+                      id='dataset-2'></path>
+                    <path class='dataset'
+                      d='M0,260 C0,260 22,199 64,199 C105,199 112,144 154,144 C195,144 194,126 216,126 C237,126 263,184 314,184 C365,183 386,128 434,129 C483,130 511,240 560,260 L0,260 Z'
+                      id='dataset-1'></path>
+                  </g>
+                </svg>
+              </div>
+
+            </div>
+            <div class="nhanVienActive tbs col-sm-4">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Tên</th>
+                    <th>Trạnh thái</th>
+                  </tr>
+                </thead>
+                <tbody id="nvactive">
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- <div class=""><a target="_blank" href="https://www.facebook.com/buihuudat.dev/">&copy;2021 Bui Huu Dat.</a>
+          All right reserved</div> -->
+      </div>
+
+      <!-- note -->
+      <!-- 
+        pk: primary key
+        fk: Foreign key
+        c: char
+        b: bit
+        d: date
+        n: number
+       -->
+      <div class="container-content hidden">
+        <div class="dir-main"><i class="fas fa-home"></i><span class="dir1">/Khách hàng</span><span class="dir">/Khách
+            hàng</span></div>
+        <div class="content-main ">
+          <div class="i">
+            <div class="content-title-main">Khách hàng</div>
+            <div class="input-main kh row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID khách hàng</span><span><input
+                    class="makh" type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Tên khách hàng</span><span><input
+                    class="tenkh" type="text"></span></div>
+              <div class="table-main va n col-sm-12"><span class="input-name">Tuổi</span><span><input class="tuoikh"
+                    type="text"></span></div>
+              <div class="table-main va n c col-sm-12"><span class="input-name">Số điện thoại</span><span><input
+                    class="sdtkh" type="text"></span></div>
+              <div class="table-main va c g col-sm-12"><span class="input-name">Mail</span><span><input class="mailkh"
+                    type="text"></span></div>
+            </div>
+          </div>
+          <div class="input-show i">
+            <div class="content-title-main">Địa chỉ</div>
+            <div class="input-main  row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID địa chỉ</span><span><input
+                    class="iddc" type="text"></span></div>
+              <div class="table-main va c fk col-sm-12"><span class="input-name">ID khách hàng</span><span><select
+                    class="idkhdc"></select></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Địa chỉ 1</span><span><input class="dc1"
+                    type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Địa chỉ 2</span><span><input class="dc2"
+                    type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Địa chỉ 3</span><span><input class="dc3"
+                    type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Quận tỉnh</span><span><input class="qt"
+                    type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Thành phố thị trấn</span><span><input
+                    class="tptt" type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Quốc gia</span><span><input class="qg"
+                    type="text"></span></div>
+              <div class="table-main va n c col-sm-12"><span class="input-name">Zip code</span><span><input class="zc"
+                    type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Địa chỉ khác</span><span><input
+                    class="dck" type="text"></span></div>
+            </div>
+          </div>
+          <div class="input-show i">
+            <div class="content-title-main">Sở thích khách hàng</div>
+            <div class="input-main stkh row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID sở thích</span><span><input
+                    class="idst" type="text"></span></div>
+              <div class="table-main va c fk col-sm-12"><span class="input-name">ID đặc điểm</span><span><select
+                    class="idddstkh"></select></span></div>
+              <div class="table-main va c fk col-sm-12"><span class="input-name">ID khách hàng</span><span><select
+                    class="idkhstkh"></select></span></div>
+            </div>
+          </div>
+
+          <div class="input-show i">
+            <div class="content-title-main">Xe bán</div>
+            <div class="input-main xb row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID xe bán</span><span><input
+                    class="idxb" type="text"></span></div>
+              <div class="table-main va c pk col-sm-12"><span class="input-name">Tên nhà sản xuất</span><span><select
+                    class="tnsxxb"></select></span></div>
+              <div class="table-main va c pk col-sm-12"><span class="input-name">Mã mô hình</span><span><select
+                    class="mmhxb" type="text"></select></span></div>
+              <div class="table-main va c pk col-sm-12"><span class="input-name">Mã loại xe</span><span><select
+                    class="mlxxb" type="text"></select></span></div>
+              <div class="table-main va n col-sm-12"><span class="input-name">Giá</span><span><input class="gxb"
+                    type="text"></span></div>
+              <div class="table-main va n col-sm-12"><span class="input-name">Số lượng</span><span><input class="slxb"
+                    type="text"></span></div>
+              <div class="table-main va d col-sm-12"><span class="input-name">Ngày mua</span><span><input class="nmxb"
+                    type="text"></span></div>
+              <div class="table-main va n col-sm-12"><span class="input-name">Năm đăng ký</span><span><input
+                    class="ndkxb" type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Thông tin thêm</span><span><input
+                    class="tttxb" type="text"></span></div>
+            </div>
+          </div>
+          <div class="input-show i">
+            <div class="content-title-main">Đặc điểm xe</div>
+            <div class="input-main ddxb row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID đặc điểm</span><span><input
+                    class="idddddx" type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Mô tả tính năng</span><span><input
+                    class="mttn" type="text"></span></div>
+            </div>
+          </div>
+          <div class="input-show i">
+            <div class="content-title-main">Xe đã bán</div>
+            <div class="input-main xdb row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID xe đã bán</span><span><input
+                    class="idxdb" type="text"></span></div>
+              <div class="table-main va c fk col-sm-12"><span class="input-name">ID xe bán</span><span><select
+                    class="idxbxdb" type="text"></select></span></div>
+              <div class="table-main va c fk col-sm-12"><span class="input-name">ID khách hàng</span><span><select
+                    class="idkhxdb" type="text"></select></span></div>
+              <div class="table-main va n col-sm-12"><span class="input-name">Giá thoải thuận</span><span><input
+                    class="gtt" type="text"></span></div>
+              <div class="table-main va d col-sm-12"><span class="input-name">Ngày bán</span><span><input class="nb"
+                    type="text"></span></div>
+              <div class="table-main va n col-sm-12"><span class="input-name">TT hàng tháng</span><span><input
+                    class="tttht" type="text"></span></div>
+              <div class="table-main va d col-sm-12"><span class="input-name">Ngày thanh toán</span><span><input
+                    class="nttht" type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Thông tin thêm</span><span><input
+                    class="tttxdb" type="text"></span></div>
+            </div>
+          </div>
+          <div class="input-show i">
+            <div class="content-title-main">Đặc điểm xe đã bán</div>
+            <div class="input-main ddxdb row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID xe bán</span><span><select
+                    class="idxbddxdb"></select></span></div>
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID đặc điểm</span><span><select
+                    class="idddddxdb"></select></span></div>
+            </div>
+          </div>
+          <div class="input-show i">
+            <div class="content-title-main">Xe mô hình</div>
+            <div class="input-main xmh row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">Mã mô hình</span><span><input
+                    class="mmh" type="text"></span></div>
+              <div class="table-main va c fk col-sm-12"><span class="input-name">Mã nhà sản xuất</span><span><input
+                    class="mnsx" type="text"></span></div>
+              <div class="table-main va t col-sm-12"><span class="input-name">Tên mô hình</span><span><input class="tmh"
+                    type="text"></span></div>
+            </div>
+          </div>
+          <div class="input-show i">
+            <div class="content-title-main">Loại xe</div>
+            <div class="input-main lx row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID loại xe</span><span><input
+                    class="mlx" type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Mô tả xe</span><span><input class="mtx"
+                    type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Nhiên liệu</span><span><input class="nl"
+                    type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Hộp số</span><span><input class="hs"
+                    type="text"></span></div>
+            </div>
+          </div>
+
+          <div class="input-show i">
+            <div class="content-title-main">Trạng thái thanh toán</div>
+            <div class="input-main row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">Mã trạng thái</span><span><input
+                    class="mtt" type="text"></span></div>
+              <div class="table-main va b col-sm-12"><span class="input-name">Trạng thái thanh toán</span><span><select
+                    class="tttt"></select></span></div>
+            </div>
+          </div>
+          <div class="input-show i">
+            <div class="content-title-main">Hóa đơn thanh toán</div>
+            <div class="input-main hdtt row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID Hóa đơn</span><span><input
+                    class="idhd" type="text"></span></div>
+              <div class="table-main va c fk col-sm-12"><span class="input-name">ID xe đã bán</span><span><select
+                    class="idxdbhdtt" type="text"></select></span></div>
+              <div class="table-main va c fk col-sm-12"><span class="input-name">ID khách hàng</span><span><select
+                    class="idkhhdtt" type="text"></select></span></div>
+              <div class="table-main va c fk col-sm-12"><span class="input-name">ID nhân viên</span><span><select
+                    class="idnvhdtt" type="text"></select></span></div>
+              <div class="table-main va c fk col-sm-12"><span class="input-name">Mã thanh toán</span><span><select
+                    class="mtthdtt" type="text"></select></span></div>
+              <div class="table-main va d col-sm-12"><span class="input-name">Ngày thanh toán</span><span><input
+                    class="ntt" type="text"></span></div>
+              <div class="table-main va d col-sm-12"><span class="input-name">Hạn thanh toán</span><span><input
+                    class="htt" type="text"></span></div>
+              <div class="table-main va n col-sm-12"><span class="input-name">Số tiền thanh toán</span><span><input
+                    class="sttt" type="text"></span></div>
+            </div>
+          </div>
+
+          <div class="input-show i">
+            <div class="content-title-main">Bảo hiểm</div>
+            <div class="input-main bh row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID bảo hiểm</span><span><input
+                    class="idbh" type="text"></span></div>
+              <div class="table-main va c fk col-sm-12"><span class="input-name">ID xe đã bán</span><span><select
+                    class="idxdbbh" type="text"></select></span></div>
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID công ty</span><span><select
+                    class="idctbh" type="text"></select></span></div>
+              <div class="table-main va d col-sm-12"><span class="input-name">Ngày bắt đầu</span><span><input
+                    class="nbdbh" type="text"></span></div>
+              <div class="table-main va d col-sm-12"><span class="input-name">Ngày kết thúc</span><span><input
+                    class="nkt" type="text"></span></div>
+              <div class="table-main va n col-sm-12"><span class="input-name">TT hàng tháng</span><span><input
+                    class="tthh" type="text"></span></div>
+            </div>
+          </div>
+          <div class="input-show i">
+            <div class="content-title-main">Công ty bảo hiểm</div>
+            <div class="input-main ctbh row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID công ty bảo hiểm</span><span><input
+                    class="idctbht" type="text"></span></div>
+              <div class="table-main va t col-sm-12"><span class="input-name">Tên công ty bảo hiểm</span><span><input
+                    class="tctbh" type="text"></span></div>
+              <div class="table-main va t col-sm-12"><span class="input-name">Quốc gia</span><span><input class="qgctbh"
+                    type="text"></span></div>
+              <div class="table-main va t col-sm-12"><span class="input-name">Thông tin thêm</span><span><input
+                    class="tttctbh" type="text"></span></div>
+            </div>
+          </div>
+
+          <div class="input-show i">
+            <div class="content-title-main">Mua cho vay</div>
+            <div class="input-main mcv row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID cho vay</span><span><input
+                    class="idcv" type="text"></span></div>
+              <div class="table-main va c fk col-sm-12"><span class="input-name">ID xe đã bán</span><span><select
+                    class="idxbd" type="text"></select></span></div>
+              <div class="table-main va c fk col-sm-12"><span class="input-name">ID công ty</span><span><select
+                    class="idct" type="text"></select></span></div>
+              <div class="table-main va d col-sm-12"><span class="input-name">Ngày bắt đầu</span><span><input
+                    class="nbd" type="text"></span></div>
+              <div class="table-main va d col-sm-12"><span class="input-name">Ngày kết thúc</span><span><input
+                    class="nktmcv" type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Thông tin thêm</span><span><input
+                    class="tttmcv" type="text"></span></div>
+            </div>
+          </div>
+          <div class="input-show i">
+            <div class="content-title-main">Công ty tài chính</div>
+            <div class="input-main cttc row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID công ty tài chính</span><span><input
+                    class="idcttc" type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Tên công ty tài chính</span><span><input
+                    class="tcttc" type="text"></span></div>
+              <div class="table-main va c n col-sm-12"><span class="input-name">Số điện thoại</span><span><input
+                    class="sdtcttc" type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Thông tin thêm</span><span><input
+                    class="tttcttc" type="text"></span></div>
+            </div>
+          </div>
+
+          <div class="input-show ipnv i">
+            <div class="content-title-main">Nhân viên</div>
+            <div class="input-main nv row">
+              <div class="table-main va c pk col-sm-12"><span class="input-name">ID nhân viên</span><span><input
+                    class="idnv" type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Tên nhân viên</span><span><input
+                    class="tnv" type="text"></span></div>
+              <div class="table-main va d col-sm-12"><span class="input-name">Ngày sinh</span><span><input class="ns"
+                    type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Giới tính</span><span><input class="gt"
+                    type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Địa chỉ</span><span><input class="dc"
+                    type="text"></span></div>
+              <div class="table-main va c n col-sm-12"><span class="input-name">Số điện thoại</span><span><input
+                    class="sdtnv" type="text"></span></div>
+              <div class="table-main va d col-sm-12"><span class="input-name">Ngày vào làm</span><span><input
+                    class="nvl" type="text"></span></div>
+              <div class="table-main va f n col-sm-12"><span class="input-name">Lương cơ bản</span><span><input
+                    class="lcb" type="text"></span></div>
+            </div>
+          </div>
+
+          <div class="input-show i">
+            <div class="content-title-main">Nhà sản xuất</div>
+            <div class="input-main nsx row">
+              <div class="table-main va c col-sm-12"><span class="input-name">Tên nhà sản xuất</span><span><input
+                    class="tnsx" type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Quốc gia</span><span><input class="qgnsx"
+                    type="text"></span></div>
+              <div class="table-main va c n col-sm-12"><span class="input-name">Số điện thoại</span><span><input
+                    class="sdtnsx" type="text"></span></div>
+            </div>
+          </div>
+
+          <div class="input-show i">
+            <div class="content-title-main">Danh sách tài khoản</div>
+            <div class="input-main dstk row">
+              <div class="table-main va c col-sm-12"><span class="input-name">Tài khoản</span><span><input class="tk"
+                    type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Mật khẩu</span><span><input class="mk"
+                    type="text"></span></div>
+              <div class="table-main va c col-sm-12"><span class="input-name">Tên đầy đủ</span><span><input class="fn"
+                    type="text"></span></div>
+              <div class="table-main va c g col-sm-12"><span class="input-name">Gmail</span><span><input class="gm"
+                    type="text"></span></div>
+              <div class="table-main va c n col-sm-12"><span class="input-name">Quyền</span><span><input class="qh"
+                    type="text"></span></div>
+              <div class="table-main va s col-sm-12"><span class="input-name">Avatar</span><span><input class="avt"
+                    type="file" id="ipImgU" title="Image"></span></div>
+              <div class="table-main va s col-sm-12"><span class="input-name"></span><img
+                  class="showImg showImgs"></img></div>
+            </div>
+          </div>
+          <!-- button -->
+          <div class="button-main">
+            <div class="btns Khachhang">
+              <button class="btnadd"><i class="fas fa-plus-square"></i><span>Thêm</span></button>
+              <button class="btnsave"><i class="fas fa-save"></i><span>Lưu</span></button>
+              <button class="btnedit"><i class="fas fa-edit"></i><span>Sửa</span></button>
+              <button class="btndel"><i class="fas fa-trash-alt"></i><span>Xóa</span></button>
+              <button class="btnrf"><i class="fas fa-redo"></i><span>Làm mới</span></button>
+            </div>
+          </div>
+          <!-- search -->
+          <div class="search-data"><input type="text" id="myInput" onkeyup="myFunctions()"
+              placeholder="Nhập dữ liệu cần tìm ..." title="Search data"></div>
+          <!-- table -->
+          <div class="output-main">
+            <table class="table table-borderless  table-hover" id="myTables">
+              <thead class="th thead-dark">
+                <tr>
+                  <th>STT</th>
+                  <th>Mã khách hàng</th>
+                  <th>Tên khách hàng</th>
+                  <th>Tuổi</th>
+                  <th>Số điện thoại</th>
+                  <th>Mail</th>
+                </tr>
+              </thead>
+              <tbody class="td addListKhachhang" id="myTable">
+              </tbody>
+              <tfoot class="tf thead-dark">
+                <tr>
+                  <th>STT</th>
+                  <th>Mã khách hàng</th>
+                  <th>Tên khách hàng</th>
+                  <th>Tuổi</th>
+                  <th>Số điện thoại</th>
+                  <th>Mail</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+  <footer class="hidden">
+    <div class="copyright "><a target="_blank" href="https://www.facebook.com/buihuudat.dev/">&copy;2021 Bui Huu Dat.</a>
+      All right reserved</div>
+  </footer>
+
+  <script>
+    $(document).ready(function(){
+      // $("#myTables").DataTable();
+      
+    })
+  </script>
+</body>
+<!-- Check input -->
+<script src="./asset/js/checkInput.js"></script>
+<!-- show all data -->
+<script src="./asset/js/showAllData.js"></script>
+<!-- Bootbox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"
+  integrity="sha512-RdSPYh1WA6BF0RhpisYJVYkOyTzK4HwofJ3Q7ivt/jkpW6Vc8AurL1R+4AUcvn9IwEKAPm/fk7qFZW3OuiUDeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- bootstrap -->
+<script src="./asset/js/bootstrap.min.js"></script>
+<!-- Array -->
+<!-- <script src="./asset/js/array.js"></script> -->
+<!-- chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- ionicon -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!-- xử lí bảng -->
+<script src="./asset/js/xulyDulieu.js"></script>
+<!-- Main -->
+<script src="./asset/js/main.js"></script>
+<!-- Thu vien nen file -->
+<script src="./asset/js/canvas-to-blob.min.js"></script>
+<script src="./asset/js/resize.js"></script>
+<!-- phân trang -->
+
+</html>

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Courgette&family=Orbitron:wght@700;800;900&family=PT+Sans+Caption&family=Satisfy&display=swap');
+:root {
+  /* font */
+  --body-font: Poppins;
+  --title-font: PT Sans;
+  --title2-font: Raleway;
+  --title3-font: PT Sans Caption;
+  /* color */
+  --body-color: #f5f5f5ee;
+  --white: #fff;
+  --title: #000;
+  --blue: #0B2345;
+  --title-lite: #939597;
+  --main-color: #FFC726;
+
+  /* z-index */
+  --z0: -99;
+  --z1: 1;
+  --z2: 99;
+
+  --height-nav: 1rem;
+}
+
+
+/* #main {
+  display: none;
+  font-size: 1rem;
+} */
+#order {
+  display: none;
+}
+
+#order img {
+  width: 100;
+  /* height: auto; */
+}
+
+#order section {
+  padding-top: 5rem;
+  /* background-color: #0B2345; */
+}
+
+.imgOrderCar {
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  background: url(../img/orderImg.jpg) no-repeat center;
+  background-size: cover;
+}
+.orderCarTitle {
+  font-family: Orbitron;
+  font-size: 5rem;
+  color: var(--blue);
+  text-decoration: underline;
+  padding-bottom: 3rem;
+}
+.orderInfo {
+  display: flex;
+  background-color: var(--white);
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: .7;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--blue) ;
+}
+.inforCar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.inforCar p {
+  padding: 0 10px;
+}
+.inforCar i,
+.inforCar span {
+  padding-right: 5px;
+}
+.inforCar .heart {
+  cursor: pointer;
+}
+.inforCar .comment a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.nameCar {
+  font-size: 3rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.carImgContent {
+  padding: 3rem 0;
+  text-align: center;
+}
+.carImgContent img {
+  width: 550px;
+  height: auto;
+}
+
+.cardContentMain {
+  padding: 3rem;
+  max-width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cardContentMain {
+  display: flex;
+  justify-content: space-between;
+}
+.carContentRight {
+  display: flex;
+  flex-direction: column;
+  color: var(--title-lite);
+}
+.view {
+  display: flex;
+  flex-direction: row;
+}
+.social {
+  display: none;
+}
+
+.carName {
+  font-size: 3rem;
+}
+.prodCar {
+  font-style: italic;
+}
+.price , .dateCar ,.viewNumber {
+  color: #000;
+}
+.price {
+  font-size: 1.25rem;
+}
+.view p {
+  padding: 0 10px;
+}
+.views span {
+  padding: 0 5px;
+}
+
+
+
+
