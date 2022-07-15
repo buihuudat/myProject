@@ -1,20 +1,11 @@
-function queryData(url, dataSend, callBack) {
-  $.ajax({
-    type: 'POST',
-    url: url,
-    data: dataSend,
-    async: true,
-    dataType: 'json',
-    success: callBack
-  });
-}
-(async function () {
+$(document).ready(function () {
+  (function () {
     var dataSend = {
       event: "getALLKH"
     }
     var htmls = '';
     var slc = '"<select><option value="0">Chọn dữ liệu</option></select>"';
-    await queryData("asset/php/api.php", dataSend, function (data) {
+    queryData("asset/php/api.php", dataSend, function (data) {
       var arr = data.items; //lấy ra mảng 
       var stt = 1;
       for (var item in arr) {
@@ -128,12 +119,14 @@ function queryData(url, dataSend, callBack) {
     }
     var htmls = '';
     var slc = '"<select><option value="0">Chọn dữ liệu</option></select>"';
+    var slc2 = '"<select><option value="0">Chọn dữ liệu</option></select>"';
     queryData("asset/php/api.php", dataSend, function (data) {
       var arr = data.items; //lấy ra mảng 
       var stt = 1;
       for (var item in arr) {
         var d = arr[item];
         slc = slc + '<option value="' + d.idddddx + '">' + d.idddddx + '</option>'
+        slc2 = slc2 + '<option value="' + d.mttn + '">' + d.mttn + '</option>'
 
         htmls = htmls + '"<tr data-idddddx="' + d.idddddx + '" data-mttn="' + d.mttn + '">' +
           '<td>' + stt + '</td>' +
@@ -146,6 +139,7 @@ function queryData(url, dataSend, callBack) {
       $(".table .td").html(htmls);
       $(".idddstkh").html(slc);
       $(".idddddxdb").html(slc);
+      $(".descClient").html(slc2);
 
     });
   })();
@@ -236,6 +230,8 @@ function queryData(url, dataSend, callBack) {
     var htmls = '';
     var slc = '"<select><option value="0">Chọn dữ liệu</option></select>"';
     var slc2 = '"<select><option value="0">Chọn kiểu xe</option></select>"';
+    var slc3 = '"<select><option value="0">Chọn dữ liệu</option></select>"';
+    var slc4 = '"<select><option value="0">Chọn dữ liệu</option></select>"';
     queryData("asset/php/api.php", dataSend, function (data) {
       var arr = data.items; //lấy ra mảng 
       var stt = 1;
@@ -243,6 +239,8 @@ function queryData(url, dataSend, callBack) {
         var d = arr[item];
         slc = slc + '<option value="' + d.mlx + '">' + d.mlx + '</option>'
         slc2 = slc2 + '<option value="' + d.mtx + '">' + d.mtx + '</option>'
+        slc3 = slc3 + '<option value="' + d.hs + '">' + d.hs + '</option>'
+        slc4 = slc4 + '<option value="' + d.nl + '">' + d.nl + '</option>'
         htmls = htmls + '<tr data-mlx="' + d.mlx + '" data-mtx="' + d.mtx + '" data-nl="' + d.nl + '" data-hs="' + d.hs + '">' +
           '<td>' + stt + '</td>' +
           '<td>' + d.mlx + '</td>' +
@@ -256,6 +254,8 @@ function queryData(url, dataSend, callBack) {
       $(".table .td").html(htmls);
       $(".mlxxb").html(slc);
       $(".adMotaxe").html(slc2);
+      $(".transmissionClient").html(slc3);
+      $(".fuelClient").html(slc4);
     });
   })();
   (function () {
@@ -458,12 +458,14 @@ function queryData(url, dataSend, callBack) {
     }
     var htmls = '';
     var slc = '"<select><option value="0">Chọn dữ liệu</option></select>"';
+    var slc2 = '"<select><option value="0">Chọn dữ liệu</option></select>"';
     queryData("asset/php/api.php", dataSend, function (data) {
       var arr = data.items; //lấy ra mảng 
       var stt = 1;
       for (var item in arr) {
         var d = arr[item];
         slc = slc + '<option value="' + d.tnsx + '">' + d.tnsx + '</option>'
+        slc2 = slc2 + '<option value="' + d.qgnsx + '">' + d.qgnsx + '</option>'
         htmls = htmls + '"<tr data-tnsx="' + d.tnsx + '" data-qgnsx="' + d.qgnsx + '" data-sdtnsx="' + d.sdtnsx + '">' +
           '<td>' + stt + '</td>' +
           '<td>' + d.tnsx + '</td>' +
@@ -475,6 +477,8 @@ function queryData(url, dataSend, callBack) {
       }
       $(".table .td").html(htmls);
       $(".tnsxxb").html(slc);
+      $(".nhasanxuatClient").html(slc);
+      $(".countryClient").html(slc2);
     });
   })();
   (function () {
@@ -509,3 +513,4 @@ function queryData(url, dataSend, callBack) {
       $("#nvactive").html(nvActive);
     });
   })();
+})
