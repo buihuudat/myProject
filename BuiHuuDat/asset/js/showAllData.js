@@ -1,11 +1,20 @@
-$(document).ready(function () {
-  (function () {
+function queryData(url, dataSend, callBack) {
+  $.ajax({
+    type: 'POST',
+    url: url,
+    data: dataSend,
+    async: true,
+    dataType: 'json',
+    success: callBack
+  });
+}
+(async function () {
     var dataSend = {
       event: "getALLKH"
     }
     var htmls = '';
     var slc = '"<select><option value="0">Chọn dữ liệu</option></select>"';
-    queryData("asset/php/api.php", dataSend, function (data) {
+    await queryData("asset/php/api.php", dataSend, function (data) {
       var arr = data.items; //lấy ra mảng 
       var stt = 1;
       for (var item in arr) {
@@ -500,4 +509,3 @@ $(document).ready(function () {
       $("#nvactive").html(nvActive);
     });
   })();
-})

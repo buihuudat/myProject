@@ -6,7 +6,7 @@ switch ($event) {
     $mang=array();
       $username=$_POST['username'];
       $password=sha1($_POST['password']);
-      $rs=mysqli_query($conn,"select * from users where  username='".$username."' and `password`='".$password."'");
+      $rs=mysqli_query($conn,"SELECT * from users where  username='".$username."' and password='".$password."'");
       if(mysqli_num_rows($rs)>0){
       while ($rows=mysqli_fetch_array($rs)){
         $usertemp['username']=$rows['username'];
@@ -34,7 +34,7 @@ switch ($event) {
     $mail=$_POST['mail'];
     $usernamesu=$_POST['usernamesu'];
     $passwordsu=$_POST['passwordsu'];
-    $rs=mysqli_query($conn, "select count(*) as 'total' from users where username = '".$usernamesu."'");
+    $rs=mysqli_query($conn, "SELECT count(*) as 'total' from users where username = '".$usernamesu."'");
     $row=mysqli_fetch_array($rs);
     if((int)$row['total'] > 0) {
       $res["success"] = 2;
@@ -82,7 +82,7 @@ switch ($event) {
     $mailkh = $_POST['mailkh'];
 
 
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  khach_hang where ID_khach_hang='" . $makh . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  khach_hang where ID_khach_hang='" . $makh . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -142,7 +142,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLKH":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from khach_hang");
+    $sql = mysqli_query($conn, "SELECT * from khach_hang");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['makh'] = $rows['ID_khach_hang'];
       $usertemp['tenkh'] = $rows['ten'];
@@ -168,7 +168,7 @@ switch ($event) {
     $qg = $_POST['qg'];
     $zc = $_POST['zc'];
     $dck = $_POST['dck'];
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  dia_chi where ID_dia_chi='" . $iddc . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  dia_chi where ID_dia_chi='" . $iddc . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -232,7 +232,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLDC":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from dia_chi");
+    $sql = mysqli_query($conn, "SELECT * from dia_chi");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['iddc'] = $rows['ID_dia_chi'];
       $usertemp['idkhdc'] = $rows['ID_khach_hang'];
@@ -256,7 +256,7 @@ switch ($event) {
     $idddstkh = $_POST['idddstkh'];
     $idkhstkh = $_POST['idkhstkh'];
 
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  so_thich_Khach_hang where ID_so_thich='" . $idst . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  so_thich_Khach_hang where ID_so_thich='" . $idst . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -313,7 +313,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLstkh":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from so_thich_Khach_hang");
+    $sql = mysqli_query($conn, "SELECT * from so_thich_Khach_hang");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['idst'] = $rows['ID_so_thich'];
       $usertemp['idddstkh'] = $rows['ID_dac_diem'];
@@ -337,7 +337,7 @@ switch ($event) {
     $ndkxb = $_POST['ndkxb'];
     $tttxb = $_POST['tttxb'];
 
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  xe_ban where ID_xe_ban='" . $idxb . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  xe_ban where ID_xe_ban='" . $idxb . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -401,7 +401,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLXB":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from xe_ban");
+    $sql = mysqli_query($conn, "SELECT * from xe_ban");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['idxb'] = $rows['ID_xe_ban'];
       $usertemp['tnsxxb'] = $rows['ten_nsx'];
@@ -426,7 +426,7 @@ switch ($event) {
     $idddddx = $_POST['idddddx'];
     $mttn = $_POST['mttn'];
 
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  dac_diem_xe where ID_dac_diem='" . $idddddx . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  dac_diem_xe where ID_dac_diem='" . $idddddx . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -480,7 +480,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLDD":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from dac_diem_xe");
+    $sql = mysqli_query($conn, "SELECT * from dac_diem_xe");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['idddddx'] = $rows['ID_dac_diem'];
       $usertemp['mttn'] = $rows['mo_ta_tinh_nang'];
@@ -501,7 +501,7 @@ switch ($event) {
     $tttht = $_POST['tttht'];
     $nttht = $_POST['nttht'];
     $tttxdb = $_POST['tttxdb'];
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  xe_da_ban where ID_xe_da_ban='" . $idxdb . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  xe_da_ban where ID_xe_da_ban='" . $idxdb . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -563,7 +563,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLXDB":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from xe_da_ban");
+    $sql = mysqli_query($conn, "SELECT * from xe_da_ban");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['idxdb'] = $rows['ID_xe_da_ban'];
       $usertemp['idxbxdb'] = $rows['ID_xe_ban'];
@@ -584,7 +584,7 @@ switch ($event) {
   case "insertDDXDB":
     $idxbddxdb = $_POST['idxbddxdb'];
     $idddddxdb = $_POST['idddddxdb'];
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  dac_diem_xe_ban where ID_xe_ban='" . $idxbddxdb . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  dac_diem_xe_ban where ID_xe_ban='" . $idxbddxdb . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -639,7 +639,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLddxdb":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from dac_diem_xe_ban");
+    $sql = mysqli_query($conn, "SELECT * from dac_diem_xe_ban");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['idxbddxdb'] = $rows['ID_xe_ban'];
       $usertemp['idddddxdb'] = $rows['ID_dac_diem'];
@@ -656,7 +656,7 @@ switch ($event) {
     $mnsx = $_POST['mnsx'];
     $tmh = $_POST['tmh'];
 
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  xe_mo_hinh where ma_mo_hinh='" . $mmh . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  xe_mo_hinh where ma_mo_hinh='" . $mmh . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -713,7 +713,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLxmh":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from xe_mo_hinh");
+    $sql = mysqli_query($conn, "SELECT * from xe_mo_hinh");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['mmh'] = $rows['ma_mo_hinh'];
       $usertemp['mnsx'] = $rows['ma_nxs'];
@@ -732,7 +732,7 @@ switch ($event) {
     $nl = $_POST['nl'];
     $hs = $_POST['hs'];
 
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  loai_xe where ma_loai_xe='" . $mlx . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  loai_xe where ma_loai_xe='" . $mlx . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -791,7 +791,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLLX":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from loai_xe");
+    $sql = mysqli_query($conn, "SELECT * from loai_xe");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['mlx'] = $rows['ma_loai_xe'];
       $usertemp['mtx'] = $rows['mo_ta_xe'];
@@ -808,7 +808,7 @@ switch ($event) {
   case "insertTT":
     $mtt = $_POST['mtt'];
     $tttt = $_POST['tttt'];
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  trang_thai_thanh_toan where ma_thanh_toan='" . $mtt . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  trang_thai_thanh_toan where ma_thanh_toan='" . $mtt . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -863,7 +863,7 @@ switch ($event) {
     break;
   case "getALLTT":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from trang_thai_thanh_toan");
+    $sql = mysqli_query($conn, "SELECT * from trang_thai_thanh_toan");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['mtt'] = $rows['ma_thanh_toan'];
       $usertemp['tttt'] = $rows['trang_thai_thanh_toan'];
@@ -885,7 +885,7 @@ switch ($event) {
     $ntt = $_POST['ntt'];
     $htt = $_POST['htt'];
     $sttt = $_POST['sttt'];
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  hoa_don_thanh_toan where ID_hoa_don='" . $idhd . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  hoa_don_thanh_toan where ID_hoa_don='" . $idhd . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -948,7 +948,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLHD":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from hoa_don_thanh_toan");
+    $sql = mysqli_query($conn, "SELECT * from hoa_don_thanh_toan");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['idhd'] = $rows['ID_hoa_don'];
       $usertemp['idxdbhdtt'] = $rows['ID_xe_da_ban'];
@@ -974,7 +974,7 @@ switch ($event) {
     $nkt = $_POST['nkt'];
     $tthh = $_POST['tthh'];
 
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  bao_hiem where ID_bao_hien='" . $idbh . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  bao_hiem where ID_bao_hien='" . $idbh . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -1035,7 +1035,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLBH":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from bao_hiem");
+    $sql = mysqli_query($conn, "SELECT * from bao_hiem");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['idbh'] = $rows['ID_bao_hien'];
       $usertemp['idxdbbh'] = $rows['ID_xe_da_ban'];
@@ -1050,7 +1050,7 @@ switch ($event) {
     mysqli_close($conn);
     break;
     $mang = array();
-    $sql = mysqli_query($conn, "select * from cong_ty_bao_hiem");
+    $sql = mysqli_query($conn, "SELECT * from cong_ty_bao_hiem");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['idctbht'] = $rows['ID_cong_ty_bao_hiem'];
       $usertemp['tctbh'] = $rows['ten_cong_ty_bao_hiem'];
@@ -1070,7 +1070,7 @@ switch ($event) {
     $qgctbh = $_POST['qgctbh'];
     $tttctbh = $_POST['tttctbh'];
 
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  cong_ty_bao_hiem where ID_cong_ty_bao_hiem='" . $idctbht . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  cong_ty_bao_hiem where ID_cong_ty_bao_hiem='" . $idctbht . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -1129,7 +1129,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLCTBH":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from cong_ty_bao_hiem");
+    $sql = mysqli_query($conn, "SELECT * from cong_ty_bao_hiem");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['idctbht'] = $rows['ID_cong_ty_bao_hiem'];
       $usertemp['tctbh'] = $rows['ten_cong_ty_bao_hiem'];
@@ -1151,7 +1151,7 @@ switch ($event) {
     $nktmcv = $_POST['nktmcv'];
     $tttmcv = $_POST['tttmcv'];
 
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  mua_cho_vay where ID_cho_vay='" . $idcv . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  mua_cho_vay where ID_cho_vay='" . $idcv . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -1211,7 +1211,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLMCV":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from mua_cho_vay");
+    $sql = mysqli_query($conn, "SELECT * from mua_cho_vay");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['idcv'] = $rows['ID_cho_vay'];
       $usertemp['idxbd'] = $rows['ID_xe_da_ban'];
@@ -1234,7 +1234,7 @@ switch ($event) {
     $sdtcttc = $_POST['sdtcttc'];
     $tttcttc = $_POST['tttcttc'];
 
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  cong_ty_tai_chinh where ID_cong_ty_tai_chinh='" . $idcttc . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  cong_ty_tai_chinh where ID_cong_ty_tai_chinh='" . $idcttc . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -1293,7 +1293,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLCTTC":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from cong_ty_tai_chinh");
+    $sql = mysqli_query($conn, "SELECT * from cong_ty_tai_chinh");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['idcttc'] = $rows['ID_cong_ty_tai_chinh'];
       $usertemp['tcttc'] = $rows['ten_cong_ty_tai_chinh'];
@@ -1317,7 +1317,7 @@ switch ($event) {
     $nvl = $_POST['nvl'];
     $lcb = $_POST['lcb'];
 
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  nhan_vien where ID_nhan_vien='" . $idnv . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  nhan_vien where ID_nhan_vien='" . $idnv . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -1379,7 +1379,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLNV":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from nhan_vien");
+    $sql = mysqli_query($conn, "SELECT * from nhan_vien");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['idnv'] = $rows['ID_nhan_vien'];
       $usertemp['tnv'] = $rows['ten_nhan_vien'];
@@ -1402,7 +1402,7 @@ switch ($event) {
     $qgnsx = $_POST['qgnsx'];
     $sdtnsx = $_POST['sdtnsx'];
 
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  nha_san_xuat where ten_nsx='" . $tnsx . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  nha_san_xuat where ten_nsx='" . $tnsx . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -1459,7 +1459,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLNSX":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from nha_san_xuat");
+    $sql = mysqli_query($conn, "SELECT * from nha_san_xuat");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['tnsx'] = $rows['ten_nsx'];
       $usertemp['qgnsx'] = $rows['quoc_gia'];
@@ -1480,7 +1480,7 @@ switch ($event) {
     $qh = $_POST['qh'];
     $avt = $_POST['avt'];
 
-    $rs = mysqli_query($conn, "select COUNT(*) as 'total' from  users where username='" . $tk . "' ");
+    $rs = mysqli_query($conn, "SELECT COUNT(*) as 'total' from  users where username='" . $tk . "' ");
     $row = mysqli_fetch_array($rs);
     if ((int)$row['total'] > 0) {
       $res["success"] = 2; //{success:2} //đều có nghĩa là đã trùng tên
@@ -1538,7 +1538,7 @@ switch ($event) {
     //Get tất cả các TheLoai
   case "getALLQLTK":
     $mang = array();
-    $sql = mysqli_query($conn, "select * from users");
+    $sql = mysqli_query($conn, "SELECT * from users");
     while ($rows = mysqli_fetch_array($sql)) {
       $usertemp['tk'] = $rows['username'];
       $usertemp['mk'] = $rows['password'];
